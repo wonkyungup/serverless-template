@@ -1,7 +1,7 @@
 # serverless-template
 
 ```
-1. git clone [url]
+1. git clone https://github.com/wonkyungup/serverless-template.git
 2. git checkout [branch]
 3. npm install
 4. npm run offline
