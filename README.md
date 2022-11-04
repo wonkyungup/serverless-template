@@ -27,7 +27,9 @@
 - [ADD] webpack.config.js
 ```
 
-[branch] serverless-dynamoDB
+
+```
+[branch] serverless-dynamodb
 - [MERGE] serverless-webpack (branch)
 - [INTALL] aws-sdk
 - [INTALL] serverless-dynamodb-local
