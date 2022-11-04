@@ -1,2 +1,7 @@
 # Serverless-template
-Serverless topics
+
+[branch] serverless-offline
+```
+[install]
+- serverless-offline
+```
