@@ -17,6 +17,7 @@
 
 ```
 [branch] serverless-webpack
+
 - [MERGE] serverless-offline (branch)
 - [INTALL] serverless-webpack
 - [INTALL] webpack-node-externals
@@ -30,6 +31,7 @@
 
 ```
 [branch] serverless-dynamodb
+
 - [MERGE] serverless-webpack (branch)
 - [INTALL] aws-sdk
 - [INTALL] serverless-dynamodb-local
