@@ -1,0 +1,18 @@
+{
+  "name": "serverless-template",
+  "version": "1.0.0",
+  "description": "serverless-offline",
+  "main": "handler.js",
+  "private": "true",
+  "scripts": {
+    "offline": "nodemon --exec serverless offline start"
+  },
+  "keywords": [
+    "offline"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "2.0.20",
+    "serverless-offline": "11.2.3"
+  }
+}
