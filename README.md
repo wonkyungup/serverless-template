@@ -10,6 +10,19 @@
 ```
 [branch] serverless-offline
 
-- [ADD] serverless-offline
-- [ADD] nodemon
+- [INTALL] serverless-offline
+- [INTALL] nodemon
+```
+
+
+```
+[branch] serverless-webpack
+
+- [INTALL] serverless-webpack
+- [INTALL] webpack-node-externals
+- [INTALL] @babel/cli
+- [INTALL] @babel/core
+- [INTALL] @babel/preset-env
+- [INTALL] babel-loader
+- [ADD] webpack.config.js
 ```
