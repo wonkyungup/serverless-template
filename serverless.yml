@@ -1,0 +1,70 @@
+service: serverless-offline
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  tableName: database
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      heapInitial: 200m
+      heapMax: 1g
+      migrate: true
+      seed: true
+      convertEmptyValues: true
+
+functions:
+  hello:
+    handler: handler.getItem
+    events:
+      - http:
+          path: /getItem
+          method: GET
+
+resources:
+  Resources:
+    sessionTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        BillingMode: PAY_PER_REQUEST
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: type
+            Projection:
+              ProjectionType: ALL
+            KeySchema:
+              - AttributeName: type
+                KeyType: HASH
+          - IndexName: created
+            Projection:
+              ProjectionType: ALL
+            KeySchema:
+              - AttributeName: type
+                KeyType: HASH
+              - AttributeName: created
+                KeyType: RANGE
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: N
+          - AttributeName: type
+            AttributeType: N
+          - AttributeName: created
+            AttributeType: N
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-webpack
+  - serverless-offline
