@@ -6,6 +6,11 @@ provider:
   name: aws
   runtime: nodejs14.x
 
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
 functions:
   hello:
     handler: handler.hello
@@ -15,4 +20,5 @@ functions:
           method: GET
 
 plugins:
+  - serverless-webpack
   - serverless-offline

@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-module.exports.hello = async () => {
+export const hello = async () => {
   return {
-    statusCode: 200,
-    body: JSON.stringify({
-      messge: 'Hello world'
-    })
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Hello world'
+      })
   }
 }
