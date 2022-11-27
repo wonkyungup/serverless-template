@@ -41,7 +41,7 @@
 
 
 ```
-[branch] serverless-mogodb
+[branch] serverless-mongodb
 
 - [MERGE] serverless-webpack (branch)
 - [INTALL] mongodb
