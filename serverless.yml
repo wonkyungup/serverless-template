@@ -1,4 +1,4 @@
-service: serverless-offline
+service: serverless-dynamodb
 
 frameworkVersion: '3'
 
@@ -9,7 +9,7 @@ provider:
 custom:
   webpack:
     webpackConfig: ./webpack.config.js
-    includeModules: true
+    includeModules: false
   tableName: database
   dynamodb:
     stages:
