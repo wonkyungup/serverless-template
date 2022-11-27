@@ -1,0 +1,11 @@
+# package directories
+.webpack
+node_modules
+jspm_packages
+package-lock.json
+
+# Serverless directories
+.serverless
+
+# jetBrain directories
+.idea

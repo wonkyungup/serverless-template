@@ -1,0 +1,33 @@
+service: serverless-mongodb
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: false
+  mongodb:
+    stages:
+      - dev
+    instance:
+      port: 27017
+      dbName: MyDB
+      dbPath: ./.mongo
+      storageEngine: wiredTiger
+
+functions:
+  index:
+    handler: handler.index
+    events:
+      - http:
+          path: /hello
+          method: GET
+
+plugins:
+  - serverless-webpack
+  - serverless-mongodb-local
+  - serverless-offline
