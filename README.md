@@ -38,3 +38,15 @@
 - [ADD] package.json "postinstall"
 - [ADD] /model/index.js
 ```
+
+
+```
+[branch] serverless-mogodb
+
+- [MERGE] serverless-webpack (branch)
+- [INTALL] mongodb
+- [INTALL] serverless-mongodb-local
+- [INTALL] mkdirp
+- [EDIT] package.json "offline"
+- [ADD] /model/index.js
+```
